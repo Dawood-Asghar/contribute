@@ -15,6 +15,7 @@ int main()
 	cout << "Enter '*' for Multiplication\n";
 	cout << "Enter '/' for Division\n";
 	cout << "Enter '^' for Power\n";
+	cout << "Enter '%' for Power\n";
 	
 	cout << "\nEnter 1st Operand : ";
 	cin >> n1;
@@ -38,6 +39,8 @@ float operation(float num1, float num2, char oper)
       if (oper == '*')   return num1 * num2;
       if (oper == '/')   return num1 / num2;
       if (oper == '^')   return pow(num1, num2);
+      if (oper == '%')   return static_cast<int>(num1) % static_cast<int>(num2);
+	   
 			cout << "!!wrong operator!!\nSelect one from the following (+,-,*,/) : ";
 			cin >> oper;
 	}
