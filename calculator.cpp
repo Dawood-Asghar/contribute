@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -13,6 +14,7 @@ int main()
 	cout << "Enter '-' for Subtraction\n";
 	cout << "Enter '*' for Multiplication\n";
 	cout << "Enter '/' for Division\n";
+	cout << "Enter '^' for Power\n";
 	
 	cout << "\nEnter 1st Operand : ";
 	cin >> n1;
@@ -35,6 +37,7 @@ float operation(float num1, float num2, char oper)
       if (oper == '-') 	 return num1 - num2;
       if (oper == '*')   return num1 * num2;
       if (oper == '/')   return num1 / num2;
+      if (oper == '^')   return pow(num1, num2);
 			cout << "!!wrong operator!!\nSelect one from the following (+,-,*,/) : ";
 			cin >> oper;
 	}
